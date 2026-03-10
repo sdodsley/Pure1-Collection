@@ -3,16 +3,17 @@ name: pure1
 version: 1.4.0
 readme: README.md
 authors:
-  - Pure Storage Ansible Team <pure-ansible-team@purestorage.com>
-description: Collection of modules to manage Pure Storage Pure1
+  - Everpure Ansible Team <pure-ansible-team@purestorage.com>
+description: Collection of modules to manage Everpure Pure1
 license:
   - GPL-3.0-or-later
   - BSD-2-Clause
 tags:
+  - everpure
   - purestorage
   - pure1
   - storage
 dependencies: {}
-repository: https://github.com/Pure-Storage-Ansible/Pure1-Collection
-documentation: https://github.com/Pure-Storage-Ansible/Pure1-Collection
-issues: https://github.com/Pure-Storage-Ansible/Pure1-Collection/issues
+repository: https://github.com/Everpure-Ansible/Pure1-Collection
+documentation: https://github.com/Everpure-Ansible/Pure1-Collection
+issues: https://github.com/Everpure-Ansible/Pure1-Collection/issues
