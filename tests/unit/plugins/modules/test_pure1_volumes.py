@@ -18,11 +18,11 @@ sys.modules["ansible.module_utils.basic"] = MagicMock()
 sys.modules["pypureclient"] = MagicMock()
 sys.modules["pypureclient.pure1"] = MagicMock()
 sys.modules["ansible_collections"] = MagicMock()
-sys.modules["ansible_collections.purestorage"] = MagicMock()
-sys.modules["ansible_collections.purestorage.pure1"] = MagicMock()
-sys.modules["ansible_collections.purestorage.pure1.plugins"] = MagicMock()
-sys.modules["ansible_collections.purestorage.pure1.plugins.module_utils"] = MagicMock()
-sys.modules["ansible_collections.purestorage.pure1.plugins.module_utils.pure1"] = (
+sys.modules["ansible_collections.everpure"] = MagicMock()
+sys.modules["ansible_collections.everpure.pure1"] = MagicMock()
+sys.modules["ansible_collections.everpure.pure1.plugins"] = MagicMock()
+sys.modules["ansible_collections.everpure.pure1.plugins.module_utils"] = MagicMock()
+sys.modules["ansible_collections.everpure.pure1.plugins.module_utils.pure1"] = (
     MagicMock()
 )
 

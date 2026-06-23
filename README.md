@@ -24,14 +24,14 @@ The Everpure Pure1 collection consists of the latest versions of the Pure1 modul
 Before using this collection, you need to install it with the Ansible Galaxy command-line tool:
 
 ```
-ansible-galaxy collection install purestorage.pure1
+ansible-galaxy collection install everpure.pure1
 ```
 
 You can also include it in a `requirements.yml` file and install it with `ansible-galaxy collection install -r requirements.yml`, using the format:
 
 ```
 collections:
-  - name: purestorage.pure1
+  - name: everpure.pure1
 ```
 
 Note that if you install the collection from Ansible Galaxy, it will not be upgraded automatically when you upgrade the Ansible package. 
@@ -39,13 +39,13 @@ Note that if you install the collection from Ansible Galaxy, it will not be upgr
 To upgrade the collection to the latest available version, run the following command:
 
 ```
-ansible-galaxy collection install purestorage.pure1 --upgrade
+ansible-galaxy collection install everpure.pure1 --upgrade
 ```
 
 You can also install a specific version of the collection, for example, if you need to downgrade when something is broken in the latest version (please report an issue in this repository). Use the following syntax to install version 1.0.0:
 
 ```
-ansible-galaxy collection install purestorage.pure1:==1.0.0
+ansible-galaxy collection install everpure.pure1:==1.0.0
 ```
 
 See [using Ansible collections](https://docs.ansible.com/ansible/devel/user_guide/collections_using.html) for more details.
@@ -55,7 +55,7 @@ See [using Ansible collections](https://docs.ansible.com/ansible/devel/user_guid
 - hosts: localhost
   tasks:
   - name: Collect information for Everpure fleet in Pure1
-    purestorage.pure1.pure1_info:
+    everpure.pure1.pure1_info:
       gather_subset: all
       app_id: <Pure1 API Application ID>
       key_file: <private key file name>

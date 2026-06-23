@@ -21,7 +21,7 @@ version_added: '1.1.0'
 deprecated:
   removed_in: '2.0.0'
   why: Replaced by more functional module
-  alternative: Use M(purestorage.pure1.pure1_nics) instead
+  alternative: Use M(everpure.pure1.pure1_nics) instead
 short_description: Collect array netowrk interface details from Pure1
 description:
   - Collect array network interface details from a Pure1.
@@ -34,12 +34,12 @@ options:
     type: str
     required: true
 extends_documentation_fragment:
-  - purestorage.pure1.purestorage.p1
+  - everpure.pure1.everpure.p1
 """
 
 EXAMPLES = r"""
 - name: collect network interface details for array foo
-  purestorage.pure1.pure1_network_interfaces:
+  everpure.pure1.pure1_network_interfaces:
     name: foo
 """
 
@@ -52,7 +52,7 @@ network_info:
 
 
 from ansible.module_utils.basic import AnsibleModule
-from ansible_collections.purestorage.pure1.plugins.module_utils.pure1 import (
+from ansible_collections.everpure.pure1.plugins.module_utils.pure1 import (
     get_pure1,
     pure1_argument_spec,
 )
