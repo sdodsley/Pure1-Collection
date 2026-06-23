@@ -44,12 +44,12 @@ options:
     choices: [ absent, present ]
     type: str
 extends_documentation_fragment:
-- purestorage.pure1.purestorage.p1
+- everpure.pure1.everpure.p1
 """
 
 EXAMPLES = r"""
 - name: Create new tags for array foo
-  purestorage.pure1.pure1_array_tags:
+  everpure.pure1.pure1_array_tags:
     name: foo
     tag:
     - 'key1:value1'
@@ -59,7 +59,7 @@ EXAMPLES = r"""
     password: PassW0rd!
 
 - name: Remove an existing tag for array foo
-  purestorage.pure1.pure1_array_tags:
+  everpure.pure1.pure1_array_tags:
     name: foo
     tag:
     - 'key1:value1'
@@ -69,7 +69,7 @@ EXAMPLES = r"""
     state: absent
 
 - name: Update an existing tag for array foo
-  purestorage.pure1.pure1_array_tags:
+  everpure.pure1.pure1_array_tags:
     name: foo
     tag:
     - 'key1:value2'
@@ -82,7 +82,7 @@ RETURN = r"""
 """
 
 from ansible.module_utils.basic import AnsibleModule
-from ansible_collections.purestorage.pure1.plugins.module_utils.pure1 import (
+from ansible_collections.everpure.pure1.plugins.module_utils.pure1 import (
     get_pure1,
     pure1_argument_spec,
 )

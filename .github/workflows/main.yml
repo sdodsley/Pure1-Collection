@@ -58,9 +58,9 @@ jobs:
     - name: Run sanity tests
       run: |
         pwd
-        mkdir -p ansible_collections/purestorage/pure1
-        rsync -av . ansible_collections/purestorage/pure1 --exclude ansible_collection/purestorage/pure1
-        cd ansible_collections/purestorage/pure1
+        mkdir -p ansible_collections/everpure/pure1
+        rsync -av . ansible_collections/everpure/pure1 --exclude ansible_collection/everpure/pure1
+        cd ansible_collections/everpure/pure1
         ansible-test sanity -v --color --python ${{ matrix.python-version }} --docker
 
   unit-tests:

@@ -40,12 +40,12 @@ options:
     default: open
     choices: [ open, closed ]
 extends_documentation_fragment:
-  - purestorage.pure1.purestorage.p1
+  - everpure.pure1.everpure.p1
 """
 
 EXAMPLES = r"""
 - name: collect critical alerts for arrayt foo
-  purestorage.pure1.pure1_alerts:
+  everpure.pure1.pure1_alerts:
     name: foo
     severity: critical
 """
@@ -59,7 +59,7 @@ alert_info:
 
 
 from ansible.module_utils.basic import AnsibleModule
-from ansible_collections.purestorage.pure1.plugins.module_utils.pure1 import (
+from ansible_collections.everpure.pure1.plugins.module_utils.pure1 import (
     get_pure1,
     pure1_argument_spec,
 )

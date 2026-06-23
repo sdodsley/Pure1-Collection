@@ -38,12 +38,12 @@ options:
     required: false
     default: minimum
 extends_documentation_fragment:
-  - purestorage.pure1.purestorage.p1
+  - everpure.pure1.everpure.p1
 """
 
 EXAMPLES = r"""
 - name: collect default set of information
-  purestorage.pure1.pure1_info:
+  everpure.pure1.pure1_info:
     register: pure1_info
 
 - name: show default information
@@ -51,7 +51,7 @@ EXAMPLES = r"""
     msg: "{{ pure1_info['pure1_info']['default'] }}"
 
 - name: collect all information
-  purestorage.pure1.pure1_info:
+  everpure.pure1.pure1_info:
     gather_subset:
       - all
 - name: show all information
@@ -68,7 +68,7 @@ pure1_info:
 
 
 from ansible.module_utils.basic import AnsibleModule
-from ansible_collections.purestorage.pure1.plugins.module_utils.pure1 import (
+from ansible_collections.everpure.pure1.plugins.module_utils.pure1 import (
     get_pure1,
     pure1_argument_spec,
 )

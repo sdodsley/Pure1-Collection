@@ -29,16 +29,16 @@ options:
 author:
   - Everpure Ansible Team (@sdodsley) <pure-ansible-team@everpuredata.com>
 extends_documentation_fragment:
-  - purestorage.pure1.purestorage.p1
+  - everpure.pure1.everpure.p1
 """
 
 EXAMPLES = r"""
 - name: collect all pod information
-  purestorage.pure1.pure1_pods:
+  everpure.pure1.pure1_pods:
     register: pure1_pods
 
 - name: collect only pod information for array X
-  purestorage.pure1.pure1_pods:
+  everpure.pure1.pure1_pods:
     array: X
     register: pure1_pods
 
@@ -56,7 +56,7 @@ pure1_pods:
 
 
 from ansible.module_utils.basic import AnsibleModule
-from ansible_collections.purestorage.pure1.plugins.module_utils.pure1 import (
+from ansible_collections.everpure.pure1.plugins.module_utils.pure1 import (
     get_pure1,
     pure1_argument_spec,
 )
