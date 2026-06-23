@@ -95,9 +95,9 @@ def create_tag(module, pure_1):
         for tag in range(0, len(module.params["tag"])):
             key = module.params["tag"][tag].split(":")[0]
             value = module.params["tag"][tag].split(":")[1]
-            tag = {"key": key, "value": value}
+            tag_kvp = {"key": key, "value": value}
             res = pure_1.put_arrays_tags(
-                resource_names=[module.params["name"]], tag=tag
+                resource_names=[module.params["name"]], tag=tag_kvp
             )
             if res.status_code != 200:
                 module.fail_json(
@@ -128,9 +128,9 @@ def update_tag(module, pure_1, current_tags):
                     ):
                         key = module.params["tag"][tag].split(":")[0]
                         value = module.params["tag"][tag].split(":")[1]
-                        tag = {"key": key, "value": value}
+                        tag_kvp = {"key": key, "value": value}
                         res = pure_1.put_arrays_tags(
-                            resource_names=[module.params["name"]], tag=tag
+                            resource_names=[module.params["name"]], tag=tag_kvp
                         )
                         if res.status_code == 200:
                             changed = True
@@ -145,9 +145,9 @@ def update_tag(module, pure_1, current_tags):
             if not tag_exists:
                 key = module.params["tag"][tag].split(":")[0]
                 value = module.params["tag"][tag].split(":")[1]
-                tag = {"key": key, "value": value}
+                tag_kvp = {"key": key, "value": value}
                 res = pure_1.put_arrays_tags(
-                    resource_names=[module.params["name"]], tag=tag
+                    resource_names=[module.params["name"]], tag=tag_kvp
                 )
                 if res.status_code == 200:
                     changed = True
