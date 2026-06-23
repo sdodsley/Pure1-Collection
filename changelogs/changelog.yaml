@@ -62,3 +62,22 @@ releases:
     fragments:
     - 32_add_invoices.yaml
     release_date: '2023-09-21'
+  1.5.0:
+    changes:
+      bugfixes:
+      - pure1_array_tags - Fix tag create/update failure handling, which raised an
+        internal TypeError instead of returning a clean error message.
+      - pure1_info - Fix subscription license resource details being collected against
+        the wrong object.
+      - pure1_info - Fix the ``invoices`` gather_subset, which could not be collected
+        due to several coding errors.
+      minor_changes:
+      - Add a pytest-based unit-test suite covering all modules, wired into CI with
+        coverage reporting.
+    fragments:
+    - add_unit_tests.yaml
+    modules:
+    - description: Collect array drives information from Pure1
+      name: pure1_drives
+      namespace: ''
+    release_date: '2026-06-23'

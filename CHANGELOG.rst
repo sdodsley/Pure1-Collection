@@ -4,6 +4,25 @@ Purestorage.Pure1 Release Notes
 
 .. contents:: Topics
 
+v1.5.0
+======
+
+Minor Changes
+-------------
+
+- Add a pytest-based unit-test suite covering all modules, wired into CI with coverage reporting.
+
+Bugfixes
+--------
+
+- pure1_array_tags - Fix tag create/update failure handling, which raised an internal TypeError instead of returning a clean error message.
+- pure1_info - Fix subscription license resource details being collected against the wrong object.
+- pure1_info - Fix the ``invoices`` gather_subset, which could not be collected due to several coding errors.
+
+New Modules
+-----------
+
+- purestorage.pure1.pure1_drives - Collect array drives information from Pure1
 
 v1.4.0
 ======
@@ -19,7 +38,7 @@ v1.3.0
 Minor Changes
 -------------
 
-- Fixed issue with use of environmental variables for key, key file and password
+- Fized issue with use of environmental variables for key, key file and password
 - password parameter is now optional, to allow for unprotected key files
 - pure1_info.py - Added more subscrition detail
 
