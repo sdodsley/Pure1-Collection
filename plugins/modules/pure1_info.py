@@ -184,18 +184,18 @@ def generate_subscription_licenses_dict(pure_1):
                 "resources": {},
             }
             for resource in range(0, len(licenses[license].resources)):
-                res_name = licenses_info[license].resources[resource].name
+                res_name = licenses[license].resources[resource].name
                 res_start_time = time.strftime(
                     "%Y-%m-%d %H:%M:%S UTC",
                     time.gmtime(
                         licenses[license].resources[resource].activation_time / 1000
                     ),
                 )
-                licenses_info[license].resources[res_name] = {
-                    "resource_type": licenses_info[license]
+                licenses_info[name]["resources"][res_name] = {
+                    "resource_type": licenses[license]
                     .resources[resource]
                     .resource_type,
-                    "fqdn": licenses_info[license].resources[resource].fqdn,
+                    "fqdn": licenses[license].resources[resource].fqdn,
                     "activation_time": res_start_time,
                     "usage": {
                         "data": licenses[license].resources[resource].usage.data,
@@ -397,7 +397,7 @@ def generate_invoices_dict(module, pure_1):
     res = pure_1.get_invoices()
     if res.status_code == 200:
         invoices = list(res.items)
-        for invoice in len(0, len(invoices)):
+        for invoice in range(0, len(invoices)):
             name = invoices[invoice].id
             invoice_date = getattr(invoices[invoice], "date", None)
             invoice_due_date = getattr(invoices[invoice], "due_date", None)
@@ -419,10 +419,10 @@ def generate_invoices_dict(module, pure_1):
                     int(invoice_ship_date / 1000)
                 ).strftime("%Y-%m-%d")
             else:
-                inv_date = None
+                inv_ship_date = None
 
             invoices_info[name] = {
-                "lines": {},
+                "lines": [],
                 "status": getattr(invoices[invoice], "status", None),
                 "amount": getattr(invoices[invoice], "amount", 0),
                 "date": inv_date,
@@ -445,12 +445,10 @@ def generate_invoices_dict(module, pure_1):
                 ),
             }
             for line in range(0, len(invoices[invoice].lines)):
-                line_start_date = (
-                    getattr(invoices[invoice].lines[line], "start_date", None),
+                line_start_date = getattr(
+                    invoices[invoice].lines[line], "start_date", None
                 )
-                line_end_date = (
-                    getattr(invoices[invoice].lines[line], "end_date", None),
-                )
+                line_end_date = getattr(invoices[invoice].lines[line], "end_date", None)
                 if line_start_date:
                     start_date = datetime.datetime.fromtimestamp(
                         int(line_start_date / 1000)
@@ -463,7 +461,7 @@ def generate_invoices_dict(module, pure_1):
                     ).strftime("%Y-%m-%d")
                 else:
                     end_date = None
-                invoices_info[invoice]["lines"].append(
+                invoices_info[name]["lines"].append(
                     {
                         "item": getattr(invoices[invoice].lines[line], "item", None),
                         "quantity": getattr(

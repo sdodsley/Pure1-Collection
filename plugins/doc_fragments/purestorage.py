@@ -9,14 +9,14 @@ __metaclass__ = type
 
 
 class ModuleDocFragment(object):
-    # Standard Pure Storage documentation fragment
+    # Standard Everpure documentation fragment
     DOCUMENTATION = r"""
 options:
   - See separate platform section for more details
 requirements:
   - See separate platform section for more details
 notes:
-  - Ansible modules are available for the following Pure Storage products: FlashArray, FlashBlade, Pure1
+  - Ansible modules are available for the following Everpure products: FlashArray, FlashBlade, Pure1
 """
 
     # Documentation fragment for Pure1
@@ -46,6 +46,6 @@ notes:
     if I(app_id) and I(key_file) arguments are not passed to the module directly
   - C(PURE1_PRIVATE_PASSWORD) environmental variable | I(password) is optional
 requirements:
-  - python >= 3.4
-  - py-pure-client >= 1.14.1
+  - python
+  - py-pure-client
 """

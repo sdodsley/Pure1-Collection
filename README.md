@@ -1,7 +1,7 @@
-<a href="https://github.com/Everpure-Ansible/Pure1-Collection/releases/latest"><img src="https://img.shields.io/github/v/tag/Everpure-Ansible/Pure1-Collection?label=release">
+<a href="https://github.com/Everpure-Ansible/Pure1-Collection/releases/latest"><img src="https://img.shields.io/github/v/tag/everpure-Ansible/Pure1-Collection?label=release">
 <a href="COPYING.GPLv3"><img src="https://img.shields.io/badge/license-GPL%20v3.0-brightgreen.svg"></a>
 <img src="https://cla-assistant.io/readme/badge/Everpure-Ansible/Pure1-Collection">
-<img src="https://github.com/Everpure-Ansible/Pure1-Collection/workflows/Everpure%20Ansible%20CI/badge.svg">
+<img src="https://github.com/everpure-Ansible/Pure1-Collection/workflows/Everpure%20Ansible%20CI/badge.svg">
 <a href="https://github.com/psf/black"><img src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
 
 # Everpure Pure1 Collection
@@ -12,9 +12,9 @@ The Everpure Pure1 collection consists of the latest versions of the Pure1 modul
 
 ## Requirements
 
-- Ansible 2.15.0 or later
-- Authorized API Application ID for Pure Storage Pure1 and associated Private Key
-  Refer to Pure Storage documentation on how to create these.
+- Ansible 2.16.0 or later
+- Authorized API Application ID for everpure Pure1 and associated Private Key
+  Refer to Everpure documentation on how to create these.
 - python >= 3.9 
 - py-pure-client
 - datetime
@@ -54,7 +54,7 @@ See [using Ansible collections](https://docs.ansible.com/ansible/devel/user_guid
 ```yaml
 - hosts: localhost
   tasks:
-  - name: Collect information for Pure Storage fleet in Pure1
+  - name: Collect information for Everpure fleet in Pure1
     purestorage.pure1.pure1_info:
       gather_subset: all
       app_id: <Pure1 API Application ID>
@@ -78,12 +78,10 @@ There are many ways in which you can participate in the project, for example:
 
 Only the latest release of this collection is supported.
 
-For support please raise a GitHub Issue on this repository.
+As Red Hat Ansible Certified Content, this collection is entitled to support through the Ansible Automation Platform (AAP) using the **Create issue** button on the top right corner. This is the Primary Support Route for a Certified Collection.
 
-If you are a Pure Storage customer, you may log a support call with the Pure Storage Support team ([support\@purestorage.com](mailto:support@purestorage.com?subject=Pure1-Ansible-Collection))
-
-If you have a Red Hat Ansible support contract, as this is a Certified collection, you may log a support call with Red Hat directly.
-  
+Community-Only help may be available on the [Ansible Forum](https://forum.ansible.com/) or raise a [GitHub issue](https://github.com/Everpure-Ansible/Pure1-Collection/issues) in the Collection repo.
+ 
 ## Release Notes
 
 Release notes for this collection can be found [here](https://github.com/Everpure-Ansible/Pure1-Collection/releases)
@@ -108,4 +106,4 @@ Release notes for this collection can be found [here](https://github.com/Everpur
 
 ## Author
 
-This collection was created in 2020 by [Simon Dodsley](@sdodsley) for, and on behalf of, the [Everpure Ansible Team](pure-ansible-team@purestorage.com)
+This collection was created in 2020 by [Simon Dodsley](https://github.com/sdodsley) for, and on behalf of, the [everpure Ansible Team](pure-ansible-team@purestorage.com)

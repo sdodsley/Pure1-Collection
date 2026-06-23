@@ -1,0 +1,6 @@
+minor_changes:
+  - Add a pytest-based unit-test suite covering all modules, wired into CI with coverage reporting.
+bugfixes:
+  - pure1_array_tags - Fix tag create/update failure handling, which raised an internal TypeError instead of returning a clean error message.
+  - pure1_info - Fix the ``invoices`` gather_subset, which could not be collected due to several coding errors.
+  - pure1_info - Fix subscription license resource details being collected against the wrong object.
