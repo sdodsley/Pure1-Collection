@@ -3,7 +3,7 @@ name: pure1
 version: 1.4.0
 readme: README.md
 authors:
-  - Everpure Ansible Team <pure-ansible-team@purestorage.com>
+  - Everpure Ansible Team <pure-ansible-team@everpuredata.com>
 description: Collection of modules to manage Everpure Pure1
 license:
   - GPL-3.0-or-later

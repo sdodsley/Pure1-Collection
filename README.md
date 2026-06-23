@@ -13,7 +13,7 @@ The Everpure Pure1 collection consists of the latest versions of the Pure1 modul
 ## Requirements
 
 - Ansible 2.16.0 or later
-- Authorized API Application ID for everpure Pure1 and associated Private Key
+- Authorized API Application ID for Everpure Pure1 and associated Private Key
   Refer to Everpure documentation on how to create these.
 - python >= 3.9 
 - py-pure-client
@@ -106,4 +106,4 @@ Release notes for this collection can be found [here](https://github.com/Everpur
 
 ## Author
 
-This collection was created in 2020 by [Simon Dodsley](https://github.com/sdodsley) for, and on behalf of, the [everpure Ansible Team](pure-ansible-team@purestorage.com)
+This collection was created in 2020 by [Simon Dodsley](https://github.com/sdodsley) for, and on behalf of, the [Everpure Ansible Team](pure-ansible-team@everpuredata.com)

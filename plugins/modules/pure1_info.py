@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-# (c) 2021, Simon Dodsley (simon@purestorage.com)
+# (c) 2021, Simon Dodsley (simon@everpuredata.com)
 # GNU General Public License v3.0+ (see COPYING or https://www.gnu.org/licenses/gpl-3.0.txt)
 
 from __future__ import absolute_import, division, print_function
@@ -26,7 +26,7 @@ description:
     and buckets. Fileset capacity and data reduction rates are also provided.
   - Additional information can be collected based on the configured set of arguements.
 author:
-  - Pure Storage ansible Team (@sdodsley) <pure-ansible-team@purestorage.com>
+  - Everpure Ansible Team (@sdodsley) <pure-ansible-team@everpuredata.com>
 options:
   gather_subset:
     description:
